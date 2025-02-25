@@ -13,14 +13,6 @@ header {
     border-bottom: 3px solid rgb(116, 0, 139);
 }
 
-.highlight {
-    color: #ffffff;
-    background-color: rgb(253, 0, 30); /* fundo vermelho com transparência */
-    padding: 0 4px;
-    border-radius: 4px;
-    font-weight: bold;
-}
-
 .logo img {
     height: 50px;
 }
@@ -158,29 +150,49 @@ nav ul li a:hover {
     background-color: #000000; /* Fundo branco; altere conforme necessário */
     padding: 60px 30px;
     text-align: center;
-  }
-  
-  .problem-section h2 {
+}
+
+.problem-section h2 {
     font-family: 'Raleway', sans-serif;
     font-size: 32px;
     font-weight: 700;
     color: #ffffff; /* Cor do título; ajuste se necessário */
     margin-bottom: 20px;
-  }
-  
-  .problem-line {
-    width: 80px;
+}
+
+.problem-line {
+    width: 160px;
     height: 3px;
     background-color: #fd001d; /* Cor da linha */
     margin: 0 auto 20px;
-  }
-  
-  .problem-subtext {
+}
+
+.problem-subtext {
     font-family: 'Lato', sans-serif;
     font-size: 24px;
-    color: #ffffff; /* Cor do parágrafo */
-    margin: 0;
-  }
+    color: #ffffff;
+    margin: 2px auto;
+
+    /* Define uma largura máxima para o texto */
+    max-width: auto;    
+
+    /* Centraliza o texto e o contêiner */
+    text-align: center;  
+    display: block;      
+
+    /* Garantir que o texto quebre normalmente dentro desse limite */
+    white-space: normal; 
+    line-height: 1.4;    /* melhora a legibilidade */
+}  
+
+  
+.highlight {
+    color: #ffffff;
+    background-color: rgb(253, 0, 30); /* fundo vermelho com transparência */
+    padding: 0 4px;
+    border-radius: 4px;
+    font-weight: bold;
+}
 
   .problems-image-container {
     margin-top: 40px;      /* Espaço antes da imagem */
@@ -228,10 +240,11 @@ nav ul li a:hover {
     margin-bottom: 30px;
 }
 
+
 .method-image img {
     max-width: 70%;
     height: auto;
-    margin-bottom: 10px;
+    margin-bottom: -50px;
 }
 
 .method-subtext {
@@ -260,6 +273,34 @@ nav ul li a:hover {
     margin: 10px auto;
 }
 
+.benefits-section {
+    background-color: #000000; /* Cor de fundo (ajuste conforme desejar) */
+    color: #ffffff;
+    text-align: center;
+    padding: 60px 30px;
+}
+
+.benefits-line {
+    width: 160px;
+    height: 3px;
+    background-color: #fd001d;
+    margin: 10px auto;
+    margin-bottom: 20px;
+}
+
+.benefits_img_container {
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.benefits_img_container img {
+    max-width: 55%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
 .cta {
     background-color: #fd001d;
     padding: 12px 24px;
@@ -273,46 +314,6 @@ nav ul li a:hover {
 
 .cta:hover {
     background-color: #ff4c4c;
-}
-
-.info-section {
-    background-color: #000000;
-    color: #ffffff;
-    text-align: center;
-    padding: 60px 30px;
-}
-
-.info-boxes {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin-bottom: 30px;
-    margin-top: -30px
-}
-
-.info-box {
-    background: #1a1a1a;
-    border-radius: 10px;
-    padding: 10px;
-    width: 230px;
-    height: auto;
-    text-align: center;
-    box-shadow: 0px 4px 10px rgba(20, 0, 1, 0.5);
-}
-
-.info-box h3 {
-    font-family: 'Raleway', sans-serif;
-    font-size: 18px;
-    font-weight: bold;
-    color: #fd001d;
-    margin-bottom: 10px;
-}
-
-.info-box p {
-    font-family: 'Lato', sans-serif;
-    font-size: 18px;
-    opacity: 0.8;
 }
 
 .cta-container {
@@ -343,10 +344,20 @@ nav ul li a:hover {
 }
 
 .product-section h2 {
-    font-family: 'Lato', sans-serif;
-    font-size: 28px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 24px;
     font-weight: 700;
     margin-bottom: 10px;
+}
+
+.highlight-product {
+    color: #ffffff;
+    background-color: rgb(253, 0, 30); /* fundo vermelho com transparência */
+    font-family: 'Raleway', sans-serif;
+    font-size: 26px;
+    padding: 0 4px;
+    border-radius: 4px;
+    font-weight: bold;
 }
 
 .product-line {
@@ -354,13 +365,33 @@ nav ul li a:hover {
     height: 3px;
     background-color: #fd001d;
     margin: 10px auto;
+    margin-bottom: 20px;
 }
 
 .product-subtext {
     font-family: 'Lato', sans-serif;
     font-size: 20px;
-    color: #ffffff;
+    color: #ffffff; /* Texto principal branco */
+    line-height: 1.8;
     text-align: center;
-    margin-bottom: 30px;
-    opacity: 0.8;
+    max-width: 900px; /* Limite de largura para melhor legibilidade */
+    margin: 0 auto 40px; /* Centraliza e dá espaçamento inferior */
+}
+
+.highlight-product-subtext {
+    color: #ffffff; /* Destaque na cor vermelha principal */
+    font-weight: bold; /* Deixa esse trecho em negrito */
+    font-size: 22px;
+    padding: 0 4px; /* (Opcional) Espaçamento interno para o fundo */
+    border-radius: 4px; /* (Opcional) Borda levemente arredondada */
+}
+
+.product-image-container {
+    text-align: center;
+}
+
+.product-image-container img {
+    max-width: 60%;
+    height: auto;
+    border-radius: 10px;
 }

@@ -13,6 +13,14 @@ header {
     border-bottom: 3px solid rgb(116, 0, 139);
 }
 
+.highlight {
+    color: #ffffff;
+    background-color: rgb(253, 0, 30); /* fundo vermelho com transparência */
+    padding: 0 4px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
 .logo img {
     height: 50px;
 }
@@ -169,11 +177,42 @@ nav ul li a:hover {
   
   .problem-subtext {
     font-family: 'Lato', sans-serif;
-    font-size: 20px;
-    color: #160721; /* Cor do parágrafo */
+    font-size: 24px;
+    color: #ffffff; /* Cor do parágrafo */
     margin: 0;
   }
-  
+
+  .problems-image-container {
+    margin-top: 40px;      /* Espaço antes da imagem */
+    text-align: center;    /* Centraliza a imagem */
+}
+
+.problems-image-container img {
+    max-width: 70%;       /* Mantém a imagem responsiva */
+    height: auto;          /* Ajusta a altura proporcionalmente */
+    border-radius: 8px;    /* (Opcional) Borda arredondada */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* (Opcional) Sombra */
+    margin-bottom: 0px;
+} 
+
+.problems-text-container {
+    margin-top: 20px; /* Espaçamento acima dos textos */
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espaçamento entre cada item */
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.problem-text-item p {
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    color: #ffffff;
+    opacity: 0.9;
+    line-height: 1.5;
+    margin: 0;
+}
 
 .method-section {
     background-color: #000000;

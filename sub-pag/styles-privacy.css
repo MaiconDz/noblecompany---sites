@@ -1,0 +1,51 @@
+/* Estilos Globais */
+body {
+    background-color: #000000;  /* Fundo preto */
+    color: #ffffff;             /* Texto branco */
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Cabeçalho e Rodapé */
+  .page-header,
+  .page-footer {
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* Seção da Política de Privacidade */
+  .privacy-policy {
+    max-width: 800px;  /* Largura máxima para melhor legibilidade */
+    margin: 0 auto;    /* Centraliza o conteúdo */
+    padding: 20px;
+  }
+  
+  .privacy-policy h1,
+  .privacy-policy h2,
+  .privacy-policy h3 {
+    /* Se desejar destacar os títulos, você pode usar uma cor de destaque */
+    color: #fd001d;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .privacy-policy p,
+  .privacy-policy ul,
+  .privacy-policy li {
+    color: #ffffff;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+  
+  .privacy-policy a {
+    color: #fd001d;
+    text-decoration: none;
+  }
+  
+  .privacy-policy a:hover {
+    text-decoration: underline;
+  }
+  

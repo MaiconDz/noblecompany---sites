@@ -547,4 +547,238 @@ nav ul li a:hover {
   .cta:hover {
     background-color: #ff4c4c;
   }
+
+  .about-noble-section {
+    position: relative;
+    background-image: url('imagens/about-noble-bg.png'); /* Altere para o caminho da sua imagem */
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    padding: 60px 30px;
+    color: #ffffff;
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  /* Overlay para escurecer a imagem e melhorar a legibilidade do texto */
+  .about-noble-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.575); /* Ajuste o valor conforme a necessidade */
+    z-index: 1;
+  }
+  
+  .about-noble-content {
+    position: relative;
+    z-index: 2; /* Garante que o conteúdo fique acima do overlay */
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .about-noble-section h2 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  
+  .about-noble-line {
+    width: 80px;
+    height: 3px;
+    background-color: #fd001d;
+    margin: 10px auto 30px;
+  }
+  
+  .about-noble-text {
+    max-width: 700px;    /* Ajuste conforme desejar */
+    margin: 0 auto 20px; /* Centraliza e espaçamento inferior */
+    line-height: 1.5;    /* Melhora a legibilidade */
+    font-family: 'Lato', sans-serif;
+    font-size: 22px;
+    color: #ffffff;
+  }  
+
+  .faq-section {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 60px 30px;
+    text-align: center;
+  }
+  
+  .faq-section h2 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  
+  .faq-line {
+    width: 80px;
+    height: 3px;
+    background-color: #fd001d;
+    margin: 10px auto 30px;
+  }
+  
+  .faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left; /* Alinha as perguntas/respostas à esquerda */
+  }
+  
+  .faq-item {
+    border-bottom: 1px solid #444; /* Linha separadora */
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+  }
+  
+  .faq-question {
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    text-align: left;
+    width: 100%;
+    display: flex;           /* Para colocar o ícone no canto direito */
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px 0;
+  }
+  
+  .faq-question:hover {
+    color: #fd001d;
+  }
+  
+  .faq-icon {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+  
+  .faq-answer p {
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    line-height: 1.4;
+    margin: 0;
+    padding: 0 10px 10px 0;
+    color: #ffffff;
+  }
+  
+  /* Quando o item está ativo, a resposta expande */
+  .faq-item.active .faq-answer {
+    max-height: 200px; /* Ajuste se precisar de mais espaço */
+  }  
+
+  .footer {
+    background-color: #160721;  /* Fundo escuro para contraste */
+    color: #ffffff;             /* Texto branco */
+    padding: 20px 30px;
+    text-align: center;
+  }
+  
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer-text {
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    margin: 0 0 10px;
+  }
+  
+  .footer-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline-flex;   /* Alinha os itens horizontalmente */
+    gap: 20px;              /* Espaço entre os itens */
+  }
+  
+  .footer-nav ul li {
+    display: inline;
+  }
+  
+  .footer-nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-nav ul li a:hover {
+    color: #fd001d;
+  }  
+  
+/* Fundo escuro por trás do modal */
+.modal {
+    display: none; /* Começa oculto */
+    position: fixed;
+    z-index: 9999; /* Fica sobre o restante da página */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Rolagem se o conteúdo for grande */
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente */
+  }
+  
+  /* Caixa de conteúdo do modal */
+  .modal-content {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    font-size: 22px;
+    margin: 10% auto; /* Centraliza vertical/horizontal */
+    padding: 20px;
+    border-radius: 0; 
+    border: 3px solid #fd001d; 
+    width: 80%;
+    max-width: 500px;
+    position: relative; /* Para posicionar o botão de fechar */
+    text-align: center; /* Centraliza o texto dentro do modal */
+  }
+
+  .modal-content h2 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 28px;         /* Tamanho da fonte */
+    font-weight: 700;        /* Negrito */
+    color: #ffffff;          /* Cor vermelha para destaque */
+    margin: 20px 0 10px;     /* Espaçamento superior e inferior */
+    text-align: center;      /* Centraliza o título */
+}
+  
+  /* Botão (X) de fechar o modal */
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  /* Efeito hover no botão de fechar (opcional) */
+  .close-button:hover {
+    color: #fd001d;
+  }
+  
+  /* Logo no topo do modal */
+  .modal-logo {
+    display: block;       /* Garante que a imagem se comporte como bloco */
+    margin: 0 auto 20px;  /* Centraliza horizontal e dá espaço abaixo */
+    max-width: 120px;     /* Ajuste conforme desejar */
+  }
+  
   

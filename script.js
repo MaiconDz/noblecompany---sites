@@ -34,52 +34,50 @@ document.addEventListener("DOMContentLoaded", function() {
     };
 
     IMask(telefoneInput, maskOptions);
-
-    document.addEventListener("DOMContentLoaded", function() {
-        const form = document.getElementById("form");
-      
-        form.addEventListener("submit", function(e) {
-          e.preventDefault(); // Impede o envio padrão do formulário
-      
-          // Captura os valores dos campos do formulário
-          const nome = document.getElementById("nome").value;
-          const email = document.getElementById("email").value;
-          const telefone = document.getElementById("telefone").value;
-          const faturamento = document.getElementById("faturamento").value;
-      
-          // Cria o objeto payload com os dados a serem enviados
-          const payload = {
+    
+    // Certifique-se de capturar o formulário corretamente
+    const form = document.getElementById("form");
+    
+    form.addEventListener("submit", function(e) {
+        e.preventDefault(); // Impede o envio padrão do formulário
+    
+        // Captura os valores dos campos do formulário
+        const nome = document.getElementById("nome").value;
+        const email = document.getElementById("email").value;
+        const telefone = document.getElementById("telefone").value;
+        const faturamento = document.getElementById("faturamento").value;
+    
+        // Cria o objeto payload com os dados a serem enviados
+        const payload = {
             nome: nome,
             email: email,
             telefone: telefone,
             faturamento: faturamento
-          };
-      
-          // Envia os dados para o n8n via fetch
-          fetch("https://backend.noblecompany.digital/webhook-test/forms_lp", {
+        };
+    
+        // Envia os dados para o n8n via fetch
+        fetch("https://backend.noblecompany.digital/webhook-test/forms_lp", {
             method: "POST",
             headers: {
-              "Content-Type": "application/json"
+                "Content-Type": "application/json"
             },
             body: JSON.stringify(payload)
-          })
-            .then(response => {
-              if (response.ok) {
+        })
+        .then(response => {
+            if (response.ok) {
                 return response.json(); // ou response.text(), conforme o retorno do seu webhook
-              } else {
+            } else {
                 throw new Error("Erro ao enviar os dados");
-              }
-            })
-            .then(data => {
-              console.log("Dados enviados com sucesso:", data);
-              alert("Obrigado! Em breve entraremos em contato.");
-              form.reset();
-            })
-            .catch(error => {
-              console.error("Erro:", error);
-              alert("Ocorreu um erro ao enviar seus dados. Tente novamente.");
-            });
+            }
+        })
+        .then(data => {
+            console.log("Dados enviados com sucesso:", data);
+            alert("Obrigado! Em breve entraremos em contato.");
+            form.reset();
+        })
+        .catch(error => {
+            console.error("Erro:", error);
+            alert("Ocorreu um erro ao enviar seus dados. Tente novamente.");
         });
     });
 });
-

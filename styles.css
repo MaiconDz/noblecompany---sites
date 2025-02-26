@@ -13,6 +13,10 @@ header {
     border-bottom: 3px solid rgb(116, 0, 139);
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .logo img {
     height: 50px;
 }
@@ -62,7 +66,7 @@ nav ul li a:hover {
     background-image: url('imagens/hero-bg.png');
     background-size: cover;
     background-position: center;
-    height: 80vh;
+    height: 90vh;
     display: flex;
     align-items: center;
     padding: 0 30px;
@@ -337,7 +341,10 @@ nav ul li a:hover {
 }
 
 .product-section {
-    background-color: #160721;
+    background: linear-gradient(rgba(0, 0, 0, 0.568), rgba(0, 0, 0, 0.644)), url('imagens/about-bg.png');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
     color: #ffffff;
     text-align: center;
     padding: 60px 30px;
@@ -376,6 +383,7 @@ nav ul li a:hover {
     text-align: center;
     max-width: 900px; /* Limite de largura para melhor legibilidade */
     margin: 0 auto 40px; /* Centraliza e dá espaçamento inferior */
+    margin-bottom: -30px;
 }
 
 .highlight-product-subtext {
@@ -394,4 +402,45 @@ nav ul li a:hover {
     max-width: 60%;
     height: auto;
     border-radius: 10px;
+}
+
+.about-section {
+    background-color: #000000; /* Fundo escuro para contraste */
+    color: #ffffff;
+    text-align: center;
+    padding: 60px 30px;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-section h2 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.about-line {
+    width: 80px;
+    height: 3px;
+    background-color: #fd001d;
+    margin: 10px auto 30px;
+}
+
+.about-text {
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 20px
+}
+
+.about-highlight {
+    color: #ff0000; /* Destaque na cor vermelha principal */
+    font-weight: bold; /* Deixa esse trecho em negrito */
+    font-size: 32px;
+    padding: 0 4px; /* (Opcional) Espaçamento interno para o fundo */
+    border-radius: 4px; /* (Opcional) Borda levemente arredondada */
 }

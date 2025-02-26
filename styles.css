@@ -444,3 +444,107 @@ nav ul li a:hover {
     padding: 0 4px; /* (Opcional) Espaçamento interno para o fundo */
     border-radius: 4px; /* (Opcional) Borda levemente arredondada */
 }
+
+.form-section {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 60px 30px;
+    text-align: center;
+    margin-top: -50px;
+  }
+  
+  .form-content {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .form-section h2 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 32px;
+    color: #ffffff;
+    margin-bottom: 10px;
+  }
+  
+  .form-section p {
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #ffffff;
+  }
+  
+  #form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-family: 'Lato', sans-serif;
+  }
+  
+  .form-group label {
+    display: block;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    margin-bottom: 5px;
+}
+
+.form-group select {
+    border: 2px solid #fd001d; /* Borda vermelha */
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 16px;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    outline: none;
+    text-align: center;
+    text-align-last: center; /* Para centralizar o texto da opção selecionada em alguns navegadores */
+    background-color: #000000;
+    color: #ffffff;
+}
+
+::placeholder {
+    color: #999;        /* Cor do placeholder */
+    font-style: italic; /* Exemplo de estilo */
+    font-weight: bold;
+  }  
+  
+  .form-group input,
+  .form-group textarea {
+    border: 2px solid #fd001d; /* Borda vermelha */
+    background-color: #000000;
+    color: #ffffff;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 16px;
+    outline: none;
+    text-align: center; /* Centraliza o texto digitado e o placeholder */
+    font-weight: bold;
+  }
+  
+  /* Se quiser um efeito especial no foco */
+  .form-group input:focus,
+  .form-group textarea:focus {
+    border-color: #ff4c4c; 
+  }  
+  
+  .cta {
+    background-color: #fd001d;
+    color: #ffffff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cta:hover {
+    background-color: #ff4c4c;
+  }
+  

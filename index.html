@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Noble Company - Home</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="imagens/logo.png">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/imask"></script>
 </head>
 <body>
     <header>
@@ -115,23 +117,55 @@
         </div>
     </section>
 
-    <section id="sobre" class="about-section">
+    <section id="contato" class="about-section">
         <div class="about-content">
-            <h2>Sobre a 
-                <br><span class = "about-highlight">Consultoria Noble IA</span>
+            <h2>Sobre a
+                <br><span class = "about-highlight">Consultoria Noble AI</span>
                 <br> de Processos e Automações
             </h2>
             <div class="about-line"></div>
-            <p class="about-text">
-                Semanalmente liberamos alguns horários restritos para uma consultoria de pré-avaliação focada em empresários
-                que desejam obter maiores resultados em seus negócios.
-            </p>
-            <p class="about-text">
-                Nela nós damos um direcionamento personalizado para aplicar a automação e inteligência artificial no seu negócio,
-                e ter mais lucratividade, previsibilidade e escalabilidade.
-            </p>
+            <div class="about-box">
+                <p class="about-text">
+                    Semanalmente liberamos alguns horários restritos para uma consultoria de pré-avaliação focada em empresários
+                    que desejam obter maiores resultados em seus negócios.
+                </p>
+                <p class="about-text">
+                    Nela nós damos um direcionamento personalizado para aplicar a automação e inteligência artificial no seu negócio,
+                    e ter mais lucratividade, previsibilidade e escalabilidade.
+                </p>
+            </div>  
         </div>
-    </section>    
+    </section>
+
+    <section class="form-section">
+        <div class="form-content">
+          <h2>Agende sua Consultoria</h2>
+          <p>Informe seus dados para continuar.</p>
+          <form id="form">
+            <div class="form-group">
+              <input type="text" id="nome" name="nome" placeholder="*Seu nome" required>
+            </div>
+            <div class="form-group">
+              <input type="email" id="email" name="email" placeholder="*Seu melhor e-mail" required>
+            </div>
+            <div class="form-group">
+              <input type="tel" id="telefone" name="telefone" placeholder="*Seu whatsapp" required>
+            </div>
+            <div class="form-group">
+                <select id="faturamento" name="faturamento" required>
+                    <option value="" disabled selected>*Qual seu faturamento mensal?</option>
+                    <option value="Abaixo de 10 mil">Abaixo de 10 mil</option>
+                    <option value="Entre 10 mil e 30 mil">Entre 10 mil e 30 mil</option>
+                    <option value="Entre 30 mil e 50 mil">Entre 30 mil e 50 mil</option>
+                    <option value="Entre 50 mil e 100 mil">Entre 50 mil e 100 mil</option>
+                    <option value="Mais de 100 mil">Mais de 100 mil</option>
+                </select>
+            </div>
+            <button type="submit" class="cta">Enviar</button>
+          </form>
+        </div>
+      </section>
+      
 
     <script src="script.js"></script>
 </body>

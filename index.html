@@ -1,209 +1,242 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Noble Company - Home</title>
-    <link rel="icon" type="image/png" sizes="32x32" href="imagens/logo.png">
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/imask"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Noble Company - Home</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="imagens/logo.png">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/imask"></script>
 </head>
 <body>
-    <header>
-        <div class="logo"> 
-            <img src="imagens/logo.png" alt="Logo da Empresa"> 
+  <header>
+
+    <div class="header-container">
+        <!-- Logo à esquerda -->
+        <div class="logo">
+          <img src="imagens/logo.png" alt="Logo da Empresa">
         </div>
+
+            <!-- Botão hamburguer (para mobile) -->
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
         <nav>
             <ul class="nav-links">
-                <li><a href="#metodo">Serviços</a></li>
-                <li><a href="#about-noble">Quem Somos?</a></li>
-                <li><a href="#faq">FAQ</a></li>
-                <li><a href="#contato" class="cta">Agende uma Chamada</a></li>
+            <li><a href="#metodo">Serviços</a></li>
+            <li><a href="#about-noble">Quem Somos?</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contato" class="cta">Agende uma Chamada</a></li>
             </ul>
         </nav>
-    </header>
+    </div>
+  </header>
 
+  <main>
+    <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-content">
-            <h1>Descubra como você pode transformar seus processos e escalar seus resultados com as soluções de Agentes Noble AI.</h1>
-        </div>
+      <div class="container hero-content">
+        <h1>Descubra como você pode transformar seus processos e escalar seus resultados com as soluções de Agentes Noble AI.</h1>
+      </div>
     </section>
 
+    <!-- Problem Section -->
     <section class="problem-section">
+      <div class="container">
         <h2>PRA QUEM É ESSA SOLUÇÃO?</h2>
         <div class="problem-line"></div>
-        <p class="problem-subtext">Se você é <span class="highlight">EMPRESÁRIO</span> e tem alguns desses problemas abaixo
-            <br>Essa solução é pra você:</p>
+        <p class="problem-subtext">
+          Se você é <span class="highlight">EMPRESÁRIO</span> e tem alguns desses problemas abaixo
+          <br>Essa solução é pra você:
+        </p>
         <div class="problems-image-container">
+          <picture>
+            <source media="(max-width: 480px)" srcset="imagens/mobile/problemas.png">
             <img src="imagens/problemas.png" alt="Principais problemas que o empresário enfrenta">
-        </div>
+          </picture>
+        </div>        
         <div class="problems-text-container">
-            <div class="problem-text-item">
-                <p>
-                    Se você se identifica com algum desses problemas, talvez seja hora
-                    de pensar em automatizar seus processos com I.A.
-                </p>
-            </div>
-            <div class="problem-text-item">
-                <p>
-                    Hoje, as empresas que estão crescendo com rapidez, são as que estão
-                    investindo em automação e inteligência artificial...
-                </p>
-            </div>
-            <div class="problem-text-item">
-                <p>
-                    Mesmo tendo um produto ou serviço de qualidade, 
-                    a falta de automação e sistemas robustos impede o crescimento rápido e sustentável.
-                </p>
-            </div>
+          <div class="problem-text-item">
+            <p>
+              Se você se identifica com algum desses problemas, talvez seja hora
+              de pensar em automatizar seus processos com I.A.
+            </p>
+          </div>
+          <div class="problem-text-item">
+            <p>
+              Hoje, as empresas que estão crescendo com rapidez, são as que estão
+              investindo em automação e inteligência artificial...
+            </p>
+          </div>
+          <div class="problem-text-item">
+            <p>
+              Mesmo tendo um produto ou serviço de qualidade, 
+              a falta de automação e sistemas robustos impede o crescimento rápido e sustentável.
+            </p>
+          </div>
         </div>
+      </div>
     </section>
 
+    <!-- First Contact Section -->
     <section class="contact-section">
-        <div class="contact-content">
-            <p>Começe a utilizar Agentes I.A. na sua empresa e veja seu negócio decolar!</p>
-        </div>
-        <div class="contact-line"></div>
-        <div class="contact-button">
-            <a href="#contato" class="cta">Agende uma Demonstração</a>
-        </div>
+      <div class="container contact-content">
+        <p>Começe a utilizar Agentes I.A. na sua empresa e veja seu negócio decolar!</p>
+      </div>
+      <div class="contact-line"></div>
+      <div class="container contact-button">
+        <a href="#contato" class="cta">Agende uma Demonstração</a>
+      </div>
     </section>
 
+    <!-- Method Section -->
     <section id="metodo" class="method-section">
+      <div class="container">
         <h2>Existe um processo específico para o seu negócio escalar com I.A.</h2>
         <div class="method-line"></div>
         <p class="method-subtext">Sem ele, seu negócio não sai do lugar.</p>
         <p class="method-noble">Método Noble AI.</p>
         <div class="method-image">
+          <picture>
+            <source media="(max-width: 480px)" srcset="imagens/mobile/metodo.png">
             <img src="imagens/metodo.png" alt="Pilares do Método">
-        </div>
+          </picture>
+        </div>        
+      </div>
     </section>
 
+    <!-- Benefits Section -->
     <section class="benefits-section">
+      <div class="container">
         <h2>BENEFICIOS DE UTILIZAR O <span class="highlight">MÉTODO NOBLE AI</span> DE AUTOMAÇÕES NO SEU NEGÓCIO</h2>
         <div class="benefits-line"></div>
         <div class="benefits_img_container">
+          <picture>
+            <source media="(max-width: 480px)" srcset="imagens/mobile/beneficios.png">
             <img src="imagens/beneficios.png" alt="Benefícios do Método Noble AI">
-        </div>
+          </picture>
+        </div>        
         <div class="cta-container">
-            <a href="#contato" class="cta cta-metodo">Quero ver isso na prática</a>
+          <a href="#contato" class="cta cta-metodo">Quero ver isso na prática</a>
         </div>
+      </div>
     </section>
 
+    <!-- Product Section -->
     <section class="product-section">
+      <div class="container">
         <h2>E no que se consiste a Noble AI?</h2>
-            <br><span class="highlight-product">É A SOLUÇÃO COMPLETA PRO SEU NEGÓCIO.</span></h2>
+        <span class="highlight-product">É A SOLUÇÃO COMPLETA PRO SEU NEGÓCIO.</span>
         <div class="product-line"></div>
-        <p class="product-subtext">No sistema Noble AI, os fundamentos são definições e
-            estruturações dos processos do seu negócio, a criação de agentes de automação nesses processos e a integração com sistemas
-            dentro da sua empresa. 
-            Todas essas etapas bem estruturadas permitirão a sua empresa crescer e prosperar
-            mesmo quando você não está presente.
-            <br><span class="highlight-product-subtext">Utilizando o poder da Inteligência Artificial.</span>
+        <p class="product-subtext">
+          No sistema Noble AI, os fundamentos são definições e estruturações dos processos do seu negócio, a criação de agentes de automação nesses processos e a integração com sistemas dentro da sua empresa.
+          Todas essas etapas bem estruturadas permitirão a sua empresa crescer e prosperar mesmo quando você não está presente.
+          <br><span class="highlight-product-subtext">Utilizando o poder da Inteligência Artificial.</span>
         </p>
         <div class="product-image-container">
+          <picture>
+            <source media="(max-width: 480px)" srcset="imagens/mobile/produtos.png">
             <img src="imagens/produtos.png" alt="O que entregamos para nossos clientes">
-        </div>
+          </picture>
+        </div>        
+      </div>
     </section>
 
+    <!-- Second Contact Section -->
     <section class="contact-section">
-        <div class="contact-content">
-            <p>Obtenha a acessoria que vai levar seu negócio ao próximo patamar com a solução Noble I.A.!</p>
-        </div>
-        <div class="contact-line"></div>
-        <div class="contact-button">
-            <a href="#contato" class="cta">Agende uma Demonstração</a>
-        </div>
+      <div class="container contact-content">
+        <p>Obtenha a assessoria que vai levar seu negócio ao próximo patamar com a solução Noble I.A.!</p>
+      </div>
+      <div class="contact-line"></div>
+      <div class="container contact-button">
+        <a href="#contato" class="cta">Agende uma Demonstração</a>
+      </div>
     </section>
 
+    <!-- About Section (Consultoria) -->
     <section id="contato" class="about-section">
-        <div class="about-content">
-            <h2>Sobre a
-                <br><span class = "about-highlight">Consultoria Noble AI</span>
-                <br> de Processos e Automações
-            </h2>
-            <div class="about-line"></div>
-            <div class="about-box">
-                <p class="about-text">
-                    Semanalmente liberamos alguns horários restritos para uma consultoria de pré-avaliação focada em empresários
-                    que desejam obter maiores resultados em seus negócios.
-                </p>
-                <p class="about-text">
-                    Nela nós damos um direcionamento personalizado para aplicar a automação e inteligência artificial no seu negócio,
-                    e ter mais lucratividade, previsibilidade e escalabilidade.
-                </p>
-            </div>  
-        </div>
+      <div class="container about-content">
+        <h2>Sobre a<br><span class="about-highlight">Consultoria Noble AI</span><br> de Processos e Automações</h2>
+        <div class="about-line"></div>
+        <div class="about-box">
+          <p class="about-text">
+            Semanalmente liberamos alguns horários restritos para uma consultoria de pré-avaliação focada em empresários que desejam obter maiores resultados em seus negócios.
+          </p>
+          <p class="about-text">
+            Nela nós damos um direcionamento personalizado para aplicar a automação e inteligência artificial no seu negócio, e ter mais lucratividade, previsibilidade e escalabilidade.
+          </p>
+        </div>  
+      </div>
     </section>
 
+    <!-- Form Section -->
     <section class="form-section">
-        <div class="form-content">
-          <h2>Agende sua Consultoria</h2>
-          <p>Informe seus dados para continuar.</p>
-          <form id="form">
-            <div class="form-group">
-              <input type="text" id="nome" name="nome" placeholder="*Seu nome" required>
-            </div>
-            <div class="form-group">
-              <input type="email" id="email" name="email" placeholder="*Seu melhor e-mail" required>
-            </div>
-            <div class="form-group">
-              <input type="tel" id="telefone" name="telefone" placeholder="*Seu whatsapp" required>
-            </div>
-            <div class="form-group">
-                <select id="faturamento" name="faturamento" required>
-                    <option value="" disabled selected>*Qual seu faturamento mensal?</option>
-                    <option value="Abaixo de 10 mil">Abaixo de 10 mil</option>
-                    <option value="Entre 10 mil e 30 mil">Entre 10 mil e 30 mil</option>
-                    <option value="Entre 30 mil e 50 mil">Entre 30 mil e 50 mil</option>
-                    <option value="Entre 50 mil e 100 mil">Entre 50 mil e 100 mil</option>
-                    <option value="Mais de 100 mil">Mais de 100 mil</option>
-                </select>
-            </div>
-            <button type="submit" class="cta">Enviar</button>
-          </form>
-        </div>
-      </section>
+      <div class="container form-content">
+        <h2>Agende sua Consultoria</h2>
+        <p>Informe seus dados para continuar.</p>
+        <form id="form">
+          <div class="form-group">
+            <input type="text" id="nome" name="nome" placeholder="*Seu nome" required>
+          </div>
+          <div class="form-group">
+            <input type="email" id="email" name="email" placeholder="*Seu melhor e-mail" required>
+          </div>
+          <div class="form-group">
+            <input type="tel" id="telefone" name="telefone" placeholder="*Seu whatsapp" required>
+          </div>
+          <div class="form-group">
+            <select id="faturamento" name="faturamento" required>
+              <option value="" disabled selected>*Qual seu faturamento mensal?</option>
+              <option value="Abaixo de 10 mil">Abaixo de 10 mil</option>
+              <option value="Entre 10 mil e 30 mil">Entre 10 mil e 30 mil</option>
+              <option value="Entre 30 mil e 50 mil">Entre 30 mil e 50 mil</option>
+              <option value="Entre 50 mil e 100 mil">Entre 50 mil e 100 mil</option>
+              <option value="Mais de 100 mil">Mais de 100 mil</option>
+            </select>
+          </div>
+          <button type="submit" class="cta-form">Enviar</button>
+        </form>
+      </div>
+    </section>
 
-      <!-- Modal de sucesso -->
+    <!-- Modal de sucesso -->
     <div id="success-modal" class="modal">
-        <div class="modal-content">
-            <span class="close-button">&times;</span>
-            <img src="imagens/logo.png" alt="Logo da Empresa" class="modal-logo">
-            <h2>Parabéns Pela Decisão!</h2>
-            <p>Nossa equipe vai entrar em contato com você em alguns minutos.</p>
-        </div>
+      <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <img src="imagens/logo.png" alt="Logo da Empresa" class="modal-logo">
+        <h2>Parabéns Pela Decisão!</h2>
+        <p>Nossa equipe vai entrar em contato com você em alguns minutos.</p>
+      </div>
     </div>
 
+    <!-- About Noble Section -->
     <section id="about-noble" class="about-noble-section">
-        <!-- Overlay para escurecer a imagem de fundo -->
-        <div class="overlay"></div>
-        <div class="about-noble-content">
-          <h2>Sobre a Noble Company</h2>
-          <div class="about-noble-line"></div>
-          <p class="about-noble-text">
-            A Noble Company é uma empresa especializada em negócios digitais, que auxilia outras empresas
-            a otimizarem seus negócios com automações e inteligência artificial, aumentando seus retornos sobre investimento
-            (ROI).
-          </p>
-          <p class="about-noble-text">
-            Fundada por Maicon Douglas Zeferino e Luiz Eduardo Rubio Mendes, a Noble Company acumula mais de 3 anos de expêriencia
-            com negócios digitais e fisicos e já ajudou dezenas de empresas a crescerem e prosperarem.
-          </p>
-          <p class="about-noble-text">
-            Após alcançarem um faturamento pra seus clientes acumulado de quase 8 digitos, Maicon e Luiz dedicam-se atualmente
-            em assessorar empresários na utilização de automações e inteligência artificial para alavancar seus negócios.
-          </p>
-        </div>
-      </section>     
-      
-      <section id="faq" class="faq-section">
+      <div class="overlay"></div>
+      <div class="container about-noble-content">
+        <h2>Sobre a Noble Company</h2>
+        <div class="about-noble-line"></div>
+        <p class="about-noble-text">
+          A Noble Company é uma empresa especializada em negócios digitais, que auxilia outras empresas a otimizarem seus negócios com automações e inteligência artificial, aumentando seus retornos sobre investimento (ROI).
+        </p>
+        <p class="about-noble-text">
+          Fundada por Maicon Douglas Zeferino e Luiz Eduardo Rubio Mendes, a Noble Company acumula mais de 3 anos de experiência com negócios digitais e físicos e já ajudou dezenas de empresas a crescerem e prosperarem.
+        </p>
+        <p class="about-noble-text">
+          Após alcançarem um faturamento para seus clientes acumulado de quase 8 dígitos, Maicon e Luiz dedicam-se atualmente a assessorar empresários na utilização de automações e inteligência artificial para alavancar seus negócios.
+        </p>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq-section">
+      <div class="container">
         <h2>Perguntas Frequentes</h2>
         <div class="faq-line"></div>
-        
         <div class="faq-container">
-      
           <!-- FAQ Item 1 -->
           <div class="faq-item">
             <button class="faq-question">
@@ -212,12 +245,10 @@
             </button>
             <div class="faq-answer">
               <p>
-                Na consultoria vamos te dar um direcionamento sobre como aplicar automações e inteligência artificial no seu negócio
-                pode te ajudar a ter mais lucratividade, previsibilidade e escalabilidade.
+                Na consultoria vamos te dar um direcionamento sobre como aplicar automações e inteligência artificial no seu negócio para aumentar lucratividade, previsibilidade e escalabilidade.
               </p>
             </div>
           </div>
-      
           <!-- FAQ Item 2 -->
           <div class="faq-item">
             <button class="faq-question">
@@ -226,12 +257,11 @@
             </button>
             <div class="faq-answer">
               <p>
-                Geralmente, as primeiras melhorias podem ser notadas em poucas semanas, mas o tempo total depende 
-                da complexidade dos processos da empresa.
+                Geralmente, as primeiras melhorias podem ser notadas em poucas semanas, mas o tempo total depende da complexidade dos processos da empresa.
               </p>
             </div>
           </div>
-
+          <!-- FAQ Item 3 -->
           <div class="faq-item">
             <button class="faq-question">
               Quanto tempo dura o diagnóstico?
@@ -239,12 +269,11 @@
             </button>
             <div class="faq-answer">
               <p>
-                O diagnóstico tem uma duração média de 30 minutos, tempo suficiente para analisarmos
-                os pontos críticos do seu negócio e como a Noble AI pode ajudar.
+                O diagnóstico tem uma duração média de 30 minutos, tempo suficiente para analisarmos os pontos críticos do seu negócio e como a Noble AI pode ajudar.
               </p>
             </div>
           </div>
-
+          <!-- FAQ Item 4 -->
           <div class="faq-item">
             <button class="faq-question">
               Quem faz o diagnóstico?
@@ -252,12 +281,11 @@
             </button>
             <div class="faq-answer">
               <p>
-                A call é feita 100% online através da plataforma segura do Google Meet com um de nossos especialistas. Caso a consultoria não
-                te agrade ou não for o que você esperava, você pode sair a qualquer momento sem ressentimentos.
+                A call é feita 100% online através da plataforma segura do Google Meet com um de nossos especialistas. Caso a consultoria não atenda às suas expectativas, você pode sair a qualquer momento sem ressentimentos.
               </p>
             </div>
           </div>
-      
+          <!-- FAQ Item 5 -->
           <div class="faq-item">
             <button class="faq-question">
               Devo participar sozinho?
@@ -265,29 +293,26 @@
             </button>
             <div class="faq-answer">
               <p>
-                Você tem a liberdade de convidar quem você quiser para participar da consultoria, mas recomendamos que
-                todos os decisores da sua empresa estejam presentes, como sócios por exemplo.
+                Você tem a liberdade de convidar quem quiser para participar da consultoria, mas recomendamos que todos os decisores da sua empresa estejam presentes.
               </p>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
-          <!-- Adicione quantos FAQ items quiser -->
-          <!-- FAQ Item 3, 4, etc... -->
-      
-        </div>
-      </section>   
-      
-      <footer class="footer">
-        <div class="footer-content">
-          <p class="footer-text">&copy; 2025 Noble Company. Todos os direitos reservados.</p>
-          <nav class="footer-nav">
-            <ul>
-              <li><a href="sub-pag/politica-de-privacidade.html">Política de Privacidade</a></li>
-            </ul>
-          </nav>
-        </div>
-      </footer>      
-      
-    <script src="script.js"></script>
+  <footer class="footer">
+    <div class="container footer-content">
+      <p class="footer-text">&copy; 2025 Noble Company. Todos os direitos reservados.</p>
+      <nav class="footer-nav">
+        <ul>
+          <li><a href="sub-pag/politica-de-privacidade.html">Política de Privacidade</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

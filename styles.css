@@ -6,12 +6,45 @@ body {
 
 header {
     background-color: #160721;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px 30px;
     border-bottom: 3px solid rgb(116, 0, 139);
-}
+    padding: 20px 30px;
+  }
+
+/* Container interno que realmente faz o flex */
+.header-container {
+    display: flex;
+    justify-content: space-between; /* Logo à esquerda, nav à direita */
+    align-items: center;
+    max-width: auto; /* Exemplo de largura máxima */
+    margin: 0 auto;    /* Centraliza o container */
+  }
+
+/* Botão hamburguer: linhas */
+.menu-toggle {
+    display: none; /* Escondido por padrão em telas grandes */
+    cursor: pointer;
+  }
+  
+  .menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px;
+    background-color: #ffffff;
+    transition: 0.3s;
+  }
+  
+  .nav-links {
+    top: 70px;
+    right: 0px;
+    background-color: #160721;
+    width: 100%;
+    flex-direction: row;
+    gap: 20px;
+    display: flex;
+    padding: 20px;
+    position: static;
+  }   
 
 html {
     scroll-behavior: smooth;
@@ -66,9 +99,10 @@ nav ul li a:hover {
     background-image: url('imagens/hero-bg.png');
     background-size: cover;
     background-position: center;
-    height: 90vh;
+    min-height: 90vh;
     display: flex;
     align-items: center;
+    justify-content: flex-start;
     padding: 0 30px;
     color: #ffffff;
 }
@@ -151,7 +185,7 @@ nav ul li a:hover {
 }
 
 .problem-section {
-    background-color: #000000; /* Fundo branco; altere conforme necessário */
+    background-color: #000000;
     padding: 60px 30px;
     text-align: center;
 }
@@ -160,14 +194,14 @@ nav ul li a:hover {
     font-family: 'Raleway', sans-serif;
     font-size: 32px;
     font-weight: 700;
-    color: #ffffff; /* Cor do título; ajuste se necessário */
+    color: #ffffff;
     margin-bottom: 20px;
 }
 
 .problem-line {
     width: 160px;
     height: 3px;
-    background-color: #fd001d; /* Cor da linha */
+    background-color: #fd001d;
     margin: 0 auto 20px;
 }
 
@@ -176,46 +210,38 @@ nav ul li a:hover {
     font-size: 24px;
     color: #ffffff;
     margin: 2px auto;
+    text-align: center;
+    display: block;
+    white-space: normal;
+    line-height: 1.4;
+}
 
-    /* Define uma largura máxima para o texto */
-    max-width: auto;    
-
-    /* Centraliza o texto e o contêiner */
-    text-align: center;  
-    display: block;      
-
-    /* Garantir que o texto quebre normalmente dentro desse limite */
-    white-space: normal; 
-    line-height: 1.4;    /* melhora a legibilidade */
-}  
-
-  
 .highlight {
     color: #ffffff;
-    background-color: rgb(253, 0, 30); /* fundo vermelho com transparência */
+    background-color: rgb(253, 0, 30);
     padding: 0 4px;
     border-radius: 4px;
     font-weight: bold;
 }
 
-  .problems-image-container {
-    margin-top: 40px;      /* Espaço antes da imagem */
-    text-align: center;    /* Centraliza a imagem */
+.problems-image-container {
+    margin-top: 40px;
+    text-align: center;
 }
 
 .problems-image-container img {
-    max-width: 70%;       /* Mantém a imagem responsiva */
-    height: auto;          /* Ajusta a altura proporcionalmente */
-    border-radius: 8px;    /* (Opcional) Borda arredondada */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* (Opcional) Sombra */
+    max-width: 70%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     margin-bottom: 0px;
-} 
+}
 
 .problems-text-container {
-    margin-top: 20px; /* Espaçamento acima dos textos */
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
-    gap: 20px; /* Espaçamento entre cada item */
+    gap: 20px;
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
@@ -244,7 +270,6 @@ nav ul li a:hover {
     margin-bottom: 30px;
 }
 
-
 .method-image img {
     max-width: 70%;
     height: auto;
@@ -260,8 +285,7 @@ nav ul li a:hover {
     margin-bottom: 50px;
 }
 
-.method-noble
-{
+.method-noble {
     font-family: 'Raleway', sans-serif;
     font-size: 20px;
     font-weight: 400;
@@ -278,7 +302,7 @@ nav ul li a:hover {
 }
 
 .benefits-section {
-    background-color: #000000; /* Cor de fundo (ajuste conforme desejar) */
+    background-color: #000000;
     color: #ffffff;
     text-align: center;
     padding: 60px 30px;
@@ -288,8 +312,7 @@ nav ul li a:hover {
     width: 160px;
     height: 3px;
     background-color: #fd001d;
-    margin: 10px auto;
-    margin-bottom: 20px;
+    margin: 10px auto 20px;
 }
 
 .benefits_img_container {
@@ -340,6 +363,21 @@ nav ul li a:hover {
     background-color: #ff4c4c;
 }
 
+.cta-form {
+    background-color: #fd001d;
+    padding: 12px 24px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none;
+    color: #ffffff;
+    display: inline-block;
+}
+
+.cta-form:hover {
+    background-color: #ff4c4c;
+}
+
 .product-section {
     background: linear-gradient(rgba(0, 0, 0, 0.568), rgba(0, 0, 0, 0.644)), url('imagens/about-bg.png');
     background-attachment: fixed;
@@ -359,7 +397,7 @@ nav ul li a:hover {
 
 .highlight-product {
     color: #ffffff;
-    background-color: rgb(253, 0, 30); /* fundo vermelho com transparência */
+    background-color: rgb(253, 0, 30);
     font-family: 'Raleway', sans-serif;
     font-size: 26px;
     padding: 0 4px;
@@ -371,27 +409,26 @@ nav ul li a:hover {
     width: 80px;
     height: 3px;
     background-color: #fd001d;
-    margin: 10px auto;
-    margin-bottom: 20px;
+    margin: 10px auto 20px;
 }
 
 .product-subtext {
     font-family: 'Lato', sans-serif;
     font-size: 20px;
-    color: #ffffff; /* Texto principal branco */
+    color: #ffffff;
     line-height: 1.8;
     text-align: center;
-    max-width: 900px; /* Limite de largura para melhor legibilidade */
-    margin: 0 auto 40px; /* Centraliza e dá espaçamento inferior */
+    max-width: 900px;
+    margin: 0 auto 40px;
     margin-bottom: -30px;
 }
 
 .highlight-product-subtext {
-    color: #ffffff; /* Destaque na cor vermelha principal */
-    font-weight: bold; /* Deixa esse trecho em negrito */
+    color: #ffffff;
+    font-weight: bold;
     font-size: 22px;
-    padding: 0 4px; /* (Opcional) Espaçamento interno para o fundo */
-    border-radius: 4px; /* (Opcional) Borda levemente arredondada */
+    padding: 0 4px;
+    border-radius: 4px;
 }
 
 .product-image-container {
@@ -405,7 +442,7 @@ nav ul li a:hover {
 }
 
 .about-section {
-    background-color: #000000; /* Fundo escuro para contraste */
+    background-color: #000000;
     color: #ffffff;
     text-align: center;
     padding: 60px 30px;
@@ -434,15 +471,15 @@ nav ul li a:hover {
     font-family: 'Lato', sans-serif;
     font-size: 20px;
     line-height: 1.5;
-    margin-bottom: 20px
+    margin-bottom: 20px;
 }
 
 .about-highlight {
-    color: #ff0000; /* Destaque na cor vermelha principal */
-    font-weight: bold; /* Deixa esse trecho em negrito */
+    color: #ff0000;
+    font-weight: bold;
     font-size: 32px;
-    padding: 0 4px; /* (Opcional) Espaçamento interno para o fundo */
-    border-radius: 4px; /* (Opcional) Borda levemente arredondada */
+    padding: 0 4px;
+    border-radius: 4px;
 }
 
 .form-section {
@@ -451,42 +488,42 @@ nav ul li a:hover {
     padding: 60px 30px;
     text-align: center;
     margin-top: -50px;
-  }
-  
-  .form-content {
+}
+
+.form-content {
     max-width: 600px;
     margin: 0 auto;
-  }
-  
-  .form-section h2 {
+}
+
+.form-section h2 {
     font-family: 'Raleway', sans-serif;
     font-size: 32px;
     color: #ffffff;
     margin-bottom: 10px;
-  }
-  
-  .form-section p {
+}
+
+.form-section p {
     font-family: 'Lato', sans-serif;
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 30px;
     color: #ffffff;
-  }
-  
-  #form {
+}
+
+#form {
     display: flex;
     flex-direction: column;
     gap: 15px;
-  }
-  
-  .form-group {
+}
+
+.form-group {
     display: flex;
     flex-direction: column;
     text-align: left;
     font-family: 'Lato', sans-serif;
-  }
-  
-  .form-group label {
+}
+
+.form-group label {
     display: block;
     text-align: center;
     font-family: 'Lato', sans-serif;
@@ -494,7 +531,7 @@ nav ul li a:hover {
 }
 
 .form-group select {
-    border: 2px solid #fd001d; /* Borda vermelha */
+    border: 2px solid #fd001d;
     border-radius: 4px;
     padding: 10px;
     font-size: 16px;
@@ -502,37 +539,36 @@ nav ul li a:hover {
     font-weight: bold;
     outline: none;
     text-align: center;
-    text-align-last: center; /* Para centralizar o texto da opção selecionada em alguns navegadores */
+    text-align-last: center;
     background-color: #000000;
     color: #ffffff;
 }
 
 ::placeholder {
-    color: #999;        /* Cor do placeholder */
-    font-style: italic; /* Exemplo de estilo */
+    color: #999;
+    font-style: italic;
     font-weight: bold;
-  }  
-  
-  .form-group input,
-  .form-group textarea {
-    border: 2px solid #fd001d; /* Borda vermelha */
+}
+
+.form-group input,
+.form-group textarea {
+    border: 2px solid #fd001d;
     background-color: #000000;
     color: #ffffff;
     border-radius: 4px;
     padding: 10px;
     font-size: 16px;
     outline: none;
-    text-align: center; /* Centraliza o texto digitado e o placeholder */
+    text-align: center;
     font-weight: bold;
-  }
-  
-  /* Se quiser um efeito especial no foco */
-  .form-group input:focus,
-  .form-group textarea:focus {
-    border-color: #ff4c4c; 
-  }  
-  
-  .cta {
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #ff4c4c;
+}
+
+.cta {
     background-color: #fd001d;
     color: #ffffff;
     padding: 12px 24px;
@@ -542,99 +578,98 @@ nav ul li a:hover {
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease;
-  }
-  
-  .cta:hover {
-    background-color: #ff4c4c;
-  }
+}
 
-  .about-noble-section {
+.cta:hover {
+    background-color: #ff4c4c;
+}
+
+.about-noble-section {
     position: relative;
-    background-image: url('imagens/about-noble-bg.png'); /* Altere para o caminho da sua imagem */
+    background-image: url('imagens/about-noble-bg.png');
     background-size: cover;
     background-position: center;
-    height: 70vh;
+    min-height: 70vh;
     padding: 60px 30px;
     color: #ffffff;
     text-align: center;
     overflow: hidden;
-  }
-  
-  /* Overlay para escurecer a imagem e melhorar a legibilidade do texto */
-  .about-noble-section .overlay {
+}
+
+.about-noble-section .overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.575); /* Ajuste o valor conforme a necessidade */
+    background-color: rgba(0, 0, 0, 0.575);
     z-index: 1;
-  }
-  
-  .about-noble-content {
+}
+
+.about-noble-content {
     position: relative;
-    z-index: 2; /* Garante que o conteúdo fique acima do overlay */
+    z-index: 2;
     max-width: 800px;
     margin: 0 auto;
-  }
-  
-  .about-noble-section h2 {
+}
+
+.about-noble-section h2 {
     font-family: 'Raleway', sans-serif;
     font-size: 32px;
     font-weight: 700;
     margin-bottom: 10px;
-  }
-  
-  .about-noble-line {
+}
+
+.about-noble-line {
     width: 80px;
     height: 3px;
     background-color: #fd001d;
     margin: 10px auto 30px;
-  }
-  
-  .about-noble-text {
-    max-width: 700px;    /* Ajuste conforme desejar */
-    margin: 0 auto 20px; /* Centraliza e espaçamento inferior */
-    line-height: 1.5;    /* Melhora a legibilidade */
+}
+
+.about-noble-text {
+    max-width: 700px;
+    margin: 0 auto 20px;
+    line-height: 1.5;
     font-family: 'Lato', sans-serif;
     font-size: 22px;
     color: #ffffff;
-  }  
+}
 
-  .faq-section {
+.faq-section {
     background-color: #000000;
     color: #ffffff;
     padding: 60px 30px;
     text-align: center;
-  }
-  
-  .faq-section h2 {
+}
+
+.faq-section h2 {
     font-family: 'Raleway', sans-serif;
     font-size: 32px;
     font-weight: 700;
     margin-bottom: 10px;
-  }
-  
-  .faq-line {
+}
+
+.faq-line {
     width: 80px;
     height: 3px;
     background-color: #fd001d;
     margin: 10px auto 30px;
-  }
-  
-  .faq-container {
+}
+
+.faq-container {
     max-width: 800px;
     margin: 0 auto;
-    text-align: left; /* Alinha as perguntas/respostas à esquerda */
-  }
-  
-  .faq-item {
-    border-bottom: 1px solid #444; /* Linha separadora */
+    text-align: left;
+}
+
+.faq-item {
+    border-bottom: 1px solid #444;
     margin-bottom: 10px;
     padding-bottom: 10px;
-  }
-  
-  .faq-question {
+}
+
+.faq-question {
     background: none;
     border: none;
     color: #ffffff;
@@ -642,143 +677,513 @@ nav ul li a:hover {
     font-size: 20px;
     text-align: left;
     width: 100%;
-    display: flex;           /* Para colocar o ícone no canto direito */
+    display: flex;
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
     padding: 10px 0;
-  }
-  
-  .faq-question:hover {
+}
+
+.faq-question:hover {
     color: #fd001d;
-  }
-  
-  .faq-icon {
+}
+
+.faq-icon {
     font-size: 24px;
     font-weight: bold;
-  }
-  
-  .faq-answer {
+}
+
+.faq-answer {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease;
-  }
-  
-  .faq-answer p {
+}
+
+.faq-answer p {
     font-family: 'Lato', sans-serif;
     font-size: 18px;
     line-height: 1.4;
     margin: 0;
     padding: 0 10px 10px 0;
     color: #ffffff;
-  }
-  
-  /* Quando o item está ativo, a resposta expande */
-  .faq-item.active .faq-answer {
-    max-height: 200px; /* Ajuste se precisar de mais espaço */
-  }  
+}
 
-  .footer {
-    background-color: #160721;  /* Fundo escuro para contraste */
-    color: #ffffff;             /* Texto branco */
+.faq-item.active .faq-answer {
+    max-height: 200px;
+}
+
+.footer {
+    background-color: #160721;
+    color: #ffffff;
     padding: 20px 30px;
     text-align: center;
-  }
-  
-  .footer-content {
+}
+
+.footer-content {
     max-width: 1200px;
     margin: 0 auto;
-  }
-  
-  .footer-text {
+}
+
+.footer-text {
     font-family: 'Lato', sans-serif;
     font-size: 16px;
     margin: 0 0 10px;
-  }
-  
-  .footer-nav ul {
+}
+
+.footer-nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: inline-flex;   /* Alinha os itens horizontalmente */
-    gap: 20px;              /* Espaço entre os itens */
-  }
-  
-  .footer-nav ul li {
+    display: inline-flex;
+    gap: 20px;
+}
+
+.footer-nav ul li {
     display: inline;
-  }
-  
-  .footer-nav ul li a {
+}
+
+.footer-nav ul li a {
     text-decoration: none;
     color: #ffffff;
     font-family: 'Lato', sans-serif;
     font-size: 18px;
     transition: color 0.3s ease;
-  }
-  
-  .footer-nav ul li a:hover {
+}
+
+.footer-nav ul li a:hover {
     color: #fd001d;
-  }  
-  
-/* Fundo escuro por trás do modal */
+}
+
 .modal {
-    display: none; /* Começa oculto */
+    display: none;
     position: fixed;
-    z-index: 9999; /* Fica sobre o restante da página */
+    z-index: 9999;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    overflow: auto; /* Rolagem se o conteúdo for grande */
-    background-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente */
-  }
-  
-  /* Caixa de conteúdo do modal */
-  .modal-content {
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
     background-color: #000000;
     color: #ffffff;
     font-family: 'Lato', sans-serif;
     font-weight: bold;
     font-size: 22px;
-    margin: 10% auto; /* Centraliza vertical/horizontal */
+    margin: 10% auto;
     padding: 20px;
-    border-radius: 0; 
-    border: 3px solid #fd001d; 
+    border-radius: 0;
+    border: 3px solid #fd001d;
     width: 80%;
     max-width: 500px;
-    position: relative; /* Para posicionar o botão de fechar */
-    text-align: center; /* Centraliza o texto dentro do modal */
-  }
-
-  .modal-content h2 {
-    font-family: 'Raleway', sans-serif;
-    font-size: 28px;         /* Tamanho da fonte */
-    font-weight: 700;        /* Negrito */
-    color: #ffffff;          /* Cor vermelha para destaque */
-    margin: 20px 0 10px;     /* Espaçamento superior e inferior */
-    text-align: center;      /* Centraliza o título */
+    position: relative;
+    text-align: center;
 }
-  
-  /* Botão (X) de fechar o modal */
-  .close-button {
+
+.modal-content h2 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 20px 0 10px;
+    text-align: center;
+}
+
+.close-button {
     position: absolute;
     top: 10px;
     right: 15px;
     font-size: 24px;
     font-weight: bold;
     cursor: pointer;
-  }
-  
-  /* Efeito hover no botão de fechar (opcional) */
-  .close-button:hover {
+}
+
+.close-button:hover {
     color: #fd001d;
-  }
-  
-  /* Logo no topo do modal */
-  .modal-logo {
-    display: block;       /* Garante que a imagem se comporte como bloco */
-    margin: 0 auto 20px;  /* Centraliza horizontal e dá espaço abaixo */
-    max-width: 120px;     /* Ajuste conforme desejar */
-  }
-  
-  
+}
+
+.modal-logo {
+    display: block;
+    margin: 0 auto 20px;
+    max-width: 120px;
+}
+
+/* MEDIA QUERIES PARA RESPONSIVIDADE */
+
+/* Tablets e dispositivos com largura até 768px */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 10px 20px;
+    }
+
+    /* Mostra o ícone hamburguer */
+      .menu-toggle {
+        display: block;
+        z-index: 9999;
+    }
+
+    .nav-links {
+        display: none;           /* Some em telas menores */
+        position: absolute;
+        top: 65px;               /* Ajuste conforme a altura do header */
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: center;
+        background-color: #160721;
+        padding: 20px;
+        text-align: center;
+        z-index: 9999;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links li a {
+        font-size: 18px;
+        color: #fff;
+        text-decoration: none;
+        display: block;
+    }
+    .logo img {
+        height: 40px;
+    }
+    
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    
+    nav ul li a {
+        font-size: 16px;
+    }
+    
+    .hero {
+        height: auto;
+        padding: 0 20px;
+        background-image: url('imagens/mobile/hero-bg.png');
+    }
+    
+    .hero h1 {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .problems-image-container img {
+        max-width: 100%;
+    }
+
+    .problems-text-container {
+        display: flex;              /* Permite usar align-items e flex-direction */
+        flex-direction: column;     /* Coloca os itens em coluna */
+        align-items: center;        /* Centraliza horizontalmente o conteúdo no contêiner */
+        gap: 20px;                  /* Espaçamento entre cada bloco de texto */
+        margin: 20px auto;          /* Auto nas laterais para centralizar o contêiner */
+        max-width: 800px;           /* Limite de largura */
+    }      
+
+    .problem-text-item p {
+        font-size: 18px;
+        width: 80%;
+        margin: 0 auto;             /* Garante que o texto em si fique centralizado se houver largura fixa */
+        text-align: center;         /* Centraliza o texto dentro do parágrafo */
+    }
+
+    .contact-button .cta {
+        font-size: 16px;
+        text-align: center;
+    }
+    
+    .method-image img {
+        max-width: 100%;
+    }
+
+    .benefits_img_container img {
+        max-width: 90%;
+    }
+
+    .product-image-container img {
+        max-width: 90%;
+    }
+
+    .contact-section,
+    .problem-section,
+    .method-section,
+    .benefits-section,
+    .product-section,
+    .about-section,
+    .form-section,
+    .faq-section {
+        padding: 40px 20px;
+    }
+    
+    .hero-content, 
+    .about-content,
+    .about-noble-content,
+    .faq-container {
+        max-width: 100%;
+    }
+    
+    .problem-subtext {
+        font-size: 20px;
+    }
+    
+    .method-section h2 {
+        font-size: 22px;
+    }
+    
+    .product-section h2 {
+        font-size: 22px;
+    }
+    
+    .product-subtext {
+        font-size: 18px;
+    }
+    
+    .form-section h2 {
+        font-size: 28px;
+    }
+    
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+        font-size: 14px;
+        padding: 8px;
+    }
+    
+    .cta, .cta-metodo {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+    
+    .footer-text,
+    .footer-nav ul li a {
+        font-size: 14px;
+    }
+    
+    .modal-content {
+        width: 90%;
+        max-width: 400px;
+    }
+    
+    .modal-content h2 {
+        font-size: 24px;
+    }
+}
+
+/* Celulares e dispositivos com largura até 480px */
+@media (max-width: 480px) {
+    header {
+        padding: 10px 15px;
+    }
+    
+    .logo img {
+        height: 35px;
+    }
+
+    .nav-links {
+        top: 60px;
+        padding: 10px;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    nav ul li a {
+        font-size: 14px;
+    }
+    
+    .hero {
+        background: url('imagens/mobile/hero-bg.png');
+        background-size: cover;
+        height: auto;
+        padding: 0 15px;
+    }
+    
+    .hero h1 {
+        font-size: auto;
+        text-align: center;
+    }
+
+    .problem-section h2 {
+        font-size: 30px;
+    }
+
+    .problem-section p {
+        font-size: 22px;
+    }
+
+    .method-section h2 {
+        font-size: 26px;
+    }
+
+    .problems-image-container {
+        position: relative;   /* Permite posicionamento do conteúdo interno */
+        width: 100%;          /* O contêiner ocupa toda a largura disponível */
+        overflow: visible;    /* Ou 'hidden' se quiser cortar a parte que excede */
+        margin: 40px auto;    /* Espaço superior e inferior, centralizado se for um bloco */
+        text-align: center;   /* Pode ser útil para outros elementos */
+    }
+
+    .problems-image-container picture,
+    .problems-image-container img {
+        display: block;
+        position: relative;   /* Para usar left e transform */
+        width: 150%;          /* Imagem maior que o contêiner */
+        left: 50%;            /* Centraliza metade da imagem */
+        transform: translateX(-50%); /* Move a imagem para a esquerda em 50% do seu tamanho */
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .benefits_img_container {
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: center; /* Centraliza horizontalmente */
+        align-items: center; /* Alinha verticalmente se necessário */
+        overflow: hidden; /* Se quiser cortar partes que ultrapassem */
+        margin: 40px auto;
+    }
+    
+    .benefits_img_container picture {
+        display: flex;
+        justify-content: center; /* Garante que a imagem dentro do <picture> fique alinhada */
+        width: 100%;
+    }
+    
+    .benefits_img_container img {
+        max-width: 125%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .product-image-container {
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: center; /* Centraliza horizontalmente */
+        align-items: center; /* Alinha verticalmente se necessário */
+        overflow: hidden; /* Se quiser cortar partes que ultrapassem */
+        margin: 40px auto;
+    }
+    
+    .product-image-container picture {
+        display: flex;
+        justify-content: center; /* Garante que a imagem dentro do <picture> fique alinhada */
+        width: 100%;
+    }
+    
+    .product-image-container img {
+        max-width: 110%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+    
+    .problem-section,
+    .method-section,
+    .benefits-section,
+    .product-section,
+    .about-section,
+    .form-section,
+    .faq-section {
+        padding: 30px 15px;
+    }
+    
+    .hero-content, 
+    .about-content,
+    .form-content,
+    .about-noble-content,
+    .faq-container {
+        max-width: 100%;
+    }
+    
+    .problem-subtext {
+        font-size: 18px;
+    }
+    
+    .product-section h2,
+    .form-section h2 {
+        font-size: 20px;
+    }
+    
+    .product-subtext {
+        font-size: 18px;
+    }
+
+    .highlight-product-subtext {
+        font-size: 18px;
+    }
+
+    .contact-section {
+        padding: 30px 15px;
+        flex-direction: column; /* Empilha os itens */
+    }
+
+    .contact-content {
+        order: 1;
+        margin-right: 0;       /* Remove margem lateral */
+        margin-bottom: 20px;   /* Espaçamento abaixo do texto */
+    }
+
+    .contact-line {
+        order: 2;
+        margin: 0 0 20px;      /* Espaçamento acima e abaixo */
+    }
+
+    .contact-button {
+        order: 3;
+    }
+    
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+        font-size: 14px;
+        padding: 14px;
+    }
+    
+    .cta, .cta-metodo {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .cta-form {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+    
+    .footer-text,
+    .footer-nav ul li a {
+        font-size: 12px;
+    }
+    
+    .modal-content {
+        width: 90%;       /* Fica um pouco maior que 80% */
+        max-width: 300px; /* Limite máximo menor em telas bem pequenas */
+        font-size: 18px;  /* Fonte menor para caber melhor */
+        padding: 15px;    /* Ajusta o padding para telas pequenas */
+    }
+
+    .modal-content h2 {
+    font-size: 24px; /* Diminui o tamanho do título */
+    }
+}

@@ -2,10 +2,11 @@ document.addEventListener("DOMContentLoaded", function() {
     // Código para o menu toggle
     const menuToggle = document.querySelector(".menu-toggle");
     const navLinks = document.querySelector(".nav-links");
+  
     if (menuToggle) {
-        menuToggle.addEventListener("click", function() {
-            navLinks.classList.toggle("active");
-        });
+      menuToggle.addEventListener("click", function() {
+        navLinks.classList.toggle("active");
+      });
     }
 
     // Detecta o tipo de navegação

@@ -108,6 +108,7 @@ document.addEventListener("DOMContentLoaded", () => {
     })
       .then((response) => {
         if (response.ok) {
+          fbq('track', 'Lead'); // Envia o evento Lead para o Facebook Pixel
           return response.json()
         } else {
           throw new Error("Erro ao enviar os dados")

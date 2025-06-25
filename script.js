@@ -85,12 +85,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const nome = document.getElementById("nome").value
     const email = document.getElementById("email").value
     const telefone = document.getElementById("telefone").value
+    const nicho = document.getElementById("nicho").value
     const faturamento = document.getElementById("faturamento").value
 
     const payload = {
       nome,
       email,
       telefone,
+      nicho,
       faturamento,
     }
 
